@@ -1,7 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
-apply plugin: 'com.jfrog.artifactory'
+//apply plugin: 'com.jfrog.artifactory'
 
 group = GROUP
 
@@ -72,24 +72,7 @@ install {
     }
 }
 
-artifactory {
-    contextUrl = 'https://oss.jfrog.org'
 
-    publish {
-        repository {
-            repoKey = 'oss-snapshot-local'
-
-            if (project.hasProperty('bintrayUser')) {
-                username = project.property('bintrayUser')
-                password = project.property('bintrayKey')
-            }
-        }
-
-        defaults {
-            publishConfigs('archives')
-        }
-    }
-}
 
 // Configure gradle-bintray-plugin (for publishing releases)
 bintray {

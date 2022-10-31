@@ -127,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 break;
             case R.id.clear_number:
-                mPopupKeyboard.getController().updateNumber("");
+//                mPopupKeyboard.getController().updateNumber("");
                 break;
             case R.id.popup_keyboard:
                 if (mPopupKeyboard.isShown()) {
