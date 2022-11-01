@@ -17,7 +17,8 @@ public class FuncKeyTransformer implements LayoutMixer.KeyTransformer {
             case OK:
                 text = "确定";
                 // 全部车牌号码已输完，启用
-                enabled = (context.limitLength == context.presetNumber.length()+1);
+//                enabled = (context.limitLength == context.presetNumber.length()+1);
+                enabled=true;
                 break;
 
             case DEL:
